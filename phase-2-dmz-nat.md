@@ -4,6 +4,7 @@ Extends the Phase 1 perimeter lab with a DMZ zone and a destination NAT rule tha
 
 ## Topology
 ![Topology]
+
 <img width="1910" height="955" alt="10" src="https://github.com/user-attachments/assets/15aa79b9-fd95-472e-828c-a0f45f84abe8" />
 
 
@@ -16,10 +17,12 @@ Extends the Phase 1 perimeter lab with a DMZ zone and a destination NAT rule tha
 - PC-DMZ (VPCS): 10.0.2.10/24, gateway 10.0.2.1
 
 ![Interfaces]
+
 <img width="1673" height="422" alt="9" src="https://github.com/user-attachments/assets/8c5c715e-9c49-4c17-bc6d-1735e5954bc4" />
 
 
 ![Zones]
+
 <img width="1703" height="224" alt="8" src="https://github.com/user-attachments/assets/c7c2afa1-c71c-4740-b85c-2a9ad430872f" />
 
 
@@ -33,9 +36,11 @@ Extends the Phase 1 perimeter lab with a DMZ zone and a destination NAT rule tha
 3. Destination NAT: Untrust-to-DMZ-DNAT translates the firewall's Untrust IP to the DMZ host 10.0.2.10.
 
 ![Security rules]
+
 <img width="1673" height="696" alt="7" src="https://github.com/user-attachments/assets/62b1839d-ee00-4e71-b5e9-4f1a724b6237" />
 
 ![NAT rules]
+
 <img width="1668" height="248" alt="6" src="https://github.com/user-attachments/assets/bd8d0050-9362-4330-9466-eade0e7d790e" />
 
 
@@ -45,18 +50,23 @@ Extends the Phase 1 perimeter lab with a DMZ zone and a destination NAT rule tha
 - Destination NAT: ping from PC-Attacker to the firewall's Untrust IP is translated to 10.0.2.10. The traffic log shows the NAT destination IP, and the session details show both the original and translated flows.
 
 ![Ping Trust to DMZ]
+
 <img width="812" height="384" alt="5" src="https://github.com/user-attachments/assets/4e22858e-a64e-4249-ba99-384692af8c7b" />
 
 ![Ping DMZ to Trust blocked]
+
 <img width="533" height="404" alt="4" src="https://github.com/user-attachments/assets/baba0908-e5a0-4ee0-8510-b705ca0da093" />
 
 ![DNAT traffic log]
+
 <img width="1688" height="533" alt="3" src="https://github.com/user-attachments/assets/8537816d-8ad7-4b90-9de4-460a6b1255f4" />
 
 ![Deny log]
+
 <img width="1682" height="317" alt="2" src="https://github.com/user-attachments/assets/9d67ea8a-8658-4b92-b68a-793941ed7d55" />
 
 ![Session detail]
+
 <img width="1473" height="832" alt="1" src="https://github.com/user-attachments/assets/ff6ff284-5ac6-4b89-a589-7b153eaa8e34" />
 
 
