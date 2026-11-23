@@ -12,17 +12,32 @@ Replaces broad allow rules between zones with an application-based rule, tested 
 - Narrowed Allow-Trust-to-DMZ from icmp, ping, traceroute, web-browsing, and ssl down to web-browsing only, with the service set to application-default.
 - Kept Deny-All-Interzone below it, with logging.
 
-![Rule](screenshots/01-security-rule-web-only.png)
+![Rule]
+
+<img width="1686" height="649" alt="2" src="https://github.com/user-attachments/assets/205aa249-df91-4d4e-82d2-26b164a23df8" />
+
 
 ## Verification
 - curl from Kali to the DMZ web server returns HTTP 200. The traffic log identifies it as web-browsing and matches Allow-Trust-to-DMZ.
 - ping between the same two hosts is now blocked. The log shows it hitting Deny-All-Interzone.
 - Same source, same destination: the firewall allowed or denied based on the application, not just the IP.
 
-![curl](screenshots/02-curl-success.png)
-![ping blocked](screenshots/03-ping-blocked.png)
-![Allow log](screenshots/04-traffic-allow-webbrowsing.png)
-![Deny log](screenshots/05-traffic-deny-ping.png)
+![curl]
+
+<img width="1473" height="888" alt="3" src="https://github.com/user-attachments/assets/03eeee48-4d51-423a-b03f-9c10b69f6d91" />
+
+![ping blocked]
+
+<img width="1473" height="888" alt="3" src="https://github.com/user-attachments/assets/c7e78728-fc3a-456b-a4cc-c978b2e54735" />
+
+![Allow log]
+
+<img width="1674" height="380" alt="1" src="https://github.com/user-attachments/assets/7a27f231-a7c3-4012-8188-171317af8de4" />
+
+![Deny log]
+
+<img width="1674" height="380" alt="1" src="https://github.com/user-attachments/assets/297f241c-1969-41cc-8783-ef8e5f9a9d9c" />
+
 
 ## Notes
 - The Phase 2 screenshots show the earlier, broader version of the Trust-to-DMZ rule.
