@@ -1,4 +1,4 @@
-# Paloalto-Firewall-Lab
+# Defense-in-Depth Enterprise-Network-Security-with-Palo-Alto-NGFW
 Hands-on Palo Alto Firewall Lab covering network security implementation, configuration and testing
 
 phase 1 perimeter
